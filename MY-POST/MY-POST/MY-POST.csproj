@@ -39,6 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AK.Util">
+      <HintPath>..\..\..\..\Perillo\MyPost\EstudosJavascript\EstudoBackbone\bin\AK.Util.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -127,13 +130,64 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\QueryStringManager.cs" />
+    <Compile Include="Helpers\RenderRazorViewToString.cs" />
+    <Compile Include="Helpers\RetornoConsulta.cs" />
+    <Compile Include="Helpers\SessionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\cd-icon-close.svg" />
+    <Content Include="Content\img\cd-icon-email.svg" />
+    <Content Include="Content\img\cd-icon-menu.svg" />
+    <Content Include="Content\img\cd-icon-password.svg" />
+    <Content Include="Content\img\cd-icon-username.svg" />
+    <Content Include="Content\img\cd-logo.svg" />
+    <Content Include="Content\img\MeControlXXLUserTile.jpg" />
+    <Content Include="Content\mypost-global.css">
+      <DependentUpon>mypost-global.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\mypost-home.css">
+      <DependentUpon>mypost-home.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\mypost-image.css">
+      <DependentUpon>mypost-image.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\mypost-login.css">
+      <DependentUpon>mypost-login.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\mypost-media-screen.css">
+      <DependentUpon>mypost-media-screen.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\reset.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\libs\backbone.js" />
+    <Content Include="Scripts\libs\backbone.min.js" />
+    <Content Include="Scripts\libs\bootstrap.min.js" />
+    <Content Include="Scripts\libs\domReady.js" />
+    <Content Include="Scripts\libs\domReady.min.js" />
+    <Content Include="Scripts\libs\jquery-1.7.1.js" />
+    <Content Include="Scripts\libs\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\libs\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\libs\jquery.validate.js" />
+    <Content Include="Scripts\libs\modernizr.js" />
+    <Content Include="Scripts\libs\pubsub.js" />
+    <Content Include="Scripts\libs\require.js" />
+    <Content Include="Scripts\libs\text.js" />
+    <Content Include="Scripts\libs\underscore-min.js" />
+    <Content Include="Scripts\plugins\jquery.tinyscrollbar.js" />
+    <Content Include="Scripts\plugins\jquery.tinyscrollbar.min.js" />
+    <Content Include="Scripts\plugins\plugins.js" />
+    <Content Include="Scripts\site\views\login.js" />
+    <Content Include="Scripts\site\views\home.js" />
+    <Content Include="Scripts\site\views\imagens.js" />
+    <Content Include="Scripts\utilidades.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -148,15 +202,36 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\mypost-global.scss" />
+    <Content Include="Content\mypost-home.scss" />
+    <Content Include="Content\mypost-image.scss" />
+    <Content Include="Content\mypost-login.scss" />
+    <Content Include="Content\mypost-media-screen.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout-Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\libs\backbone-min.map" />
+    <Content Include="Scripts\libs\underscore-min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\_Cadastro.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\_Login.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

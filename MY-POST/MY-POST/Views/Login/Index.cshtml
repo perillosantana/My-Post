@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout-Login.cshtml";
+}
+
+<!--Abas-->
+<div class="u-abas clearfix">
+    <ul>
+        <li class="active"><a href="#tab1">Login</a></li>
+        <li><a href="#tab2">Cadastro</a></li>
+    </ul>
+</div>
+
+@Html.Partial("~/Views/Login/_Login.cshtml")
+
+@Html.Partial("~/Views/Login/_Cadastro.cshtml")
+
+@section Scripts {
+    <script type="text/javascript">
+        pubsub.subscribe('onAppLoaded', function () {
+            app.login.loadComplete(function (Login) {
+                var view = new Login();
+            });
+        });
+    </script>
+}

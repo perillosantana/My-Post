@@ -1,0 +1,103 @@
+.mypost-content {
+	.imagens {
+		width: 75%;
+		margin: 0 auto;
+		padding: 10px;
+
+		.box {
+			width: 32.333333333%;
+			float: left;
+			margin: 5px;
+			margin-bottom: 15px;
+			position: relative;
+			border-bottom: solid 1px #B1B1B1;
+
+
+			img {
+				width: 100%;
+				border-radius: 10px 10px 0 0;
+			}
+
+			.mypost-detalhes {
+				margin: 5px;
+				height: 80px;
+				position: relative;
+
+				.legenda {
+					display: block;
+					margin-bottom: 10px;
+				}
+
+				.data {
+					margin-top: 5px;
+					margin-bottom: 5px;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+			}
+		}
+
+		.box:hover {
+			img {
+			}
+			.legenda {
+
+			}
+
+			.data {
+
+			}
+		}
+
+		.imagen-quantidade {
+		}
+	}
+}
+
+.mypost-header {
+	background: #26BAC7;
+	max-height: 57px;
+	margin-bottom: 5px;
+
+	.user-image {
+		float: left;
+		padding: 5px;
+		padding-left: 20px;
+		margin-right: 3%;
+		width: 70px;
+
+		img {
+			width: 100%;
+			border-radius: 2px;
+			box-shadow: 0px 0px 3px 0px #4D4A4A;
+			cursor: pointer;
+		}
+	}
+
+	.mypost-menu {
+		min-height: 57px;
+		padding: 0;
+		float: left;
+
+		ul li {
+		float: left;
+		margin-left: 15px;
+		margin-right: 15px;
+		position: relative;
+			a {
+				display: block;
+				height: 57px;
+				background-image: url("../Content/img/cd-icon-username.svg");
+			}
+		}
+	}
+
+	.logout {
+		position: absolute;
+		display: block;
+		height: 57px;
+		background-image: url("../Content/img/cd-icon-username.svg");
+		right: 5%;
+	}
+}
